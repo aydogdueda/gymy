@@ -1,0 +1,34 @@
+.register {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  transition: 0.8s;
+  animation-name: register;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+keyframes register {
+  from {
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+  }
+}
+
+.register .register.form {
+  width: 400px;
+  height: 400px;
+  padding: 30px 20px;
+  background: rgba(79, 53, 53, 0.15);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
