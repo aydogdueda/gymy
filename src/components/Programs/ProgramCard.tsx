@@ -9,6 +9,7 @@ import {
   StyledCard,
 } from "@/components/styles/Card.styled";
 import { TProgramData } from "@/programData";
+import { NavLink } from "react-router-dom";
 
 const ProgramCard = ({
   img,
@@ -16,6 +17,7 @@ const ProgramCard = ({
   details,
   imgStart,
   line,
+  link
 }: TProgramData): JSX.Element => {
   return (
     <StyledCard imgStart={imgStart}>
@@ -25,9 +27,9 @@ const ProgramCard = ({
       <CardDetails>
         <SectionCardTitle>{title}</SectionCardTitle>
         <SectionCardDetails>{details}</SectionCardDetails>
-        <StyledButton>
+        <NavLink to={link}>
           Daha Fazla <PlayIcon />
-        </StyledButton>
+        </NavLink>
       </CardDetails>
     </StyledCard>
   );

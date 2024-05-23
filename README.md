@@ -1,19 +1,14 @@
-# Intrepide
+# Gymy
 
-## Gym fitness website using react js and styled components
+Gymy is a gym management system that allows gym owners to manage their gym members, trainers, and classes. It also allows gym members to book classes and view their attendance history.
 
-- ## Design: [Intrepide](https://www.figma.com/file/cWhpA7Pyx2Ytrb4EFP1CFF/Intrepide?node-id=0%3A1)
-- ## Live: [Intrepide](https://intrepide.netlify.app/)
+## Features
 
----
+- Gym owners can add, update, and delete gym members, trainers, and classes.
+- Gym members can book classes and view their attendance history.
+- Gym members can view the classes they have booked.
 
-### `usage`
+## Running the Application
 
-```npm
-yarn install
-```
+`npm run dev`
 
-### `yarn dev`
-
-Runs the app in the development mode.\
-Open [http://localhost:5174/](http://localhost:5174/) to view it in your browser.

@@ -10,6 +10,7 @@ import {
   SubTitle,
 } from "@/components/styles/Card.styled";
 import { HiOutlineArrowNarrowRight as Arrow } from "react-icons/hi";
+import { NavLink } from "react-router-dom";
 
 export const AboutCard = ({
   img,
@@ -27,9 +28,12 @@ export const AboutCard = ({
         <SubTitle>{subTitle}</SubTitle>
         <SectionCardTitle>{title}</SectionCardTitle>
         <SectionCardDetails>{details}</SectionCardDetails>
-        <SectionLink>
+        {/* <SectionLink>
           Daha Fazla <Arrow />
-        </SectionLink>
+        </SectionLink> */}
+        <NavLink to="about">
+          Daha Fazla <Arrow />
+        </NavLink>
       </CardDetails>
     </StyledCard>
   );

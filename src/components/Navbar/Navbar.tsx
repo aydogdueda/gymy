@@ -5,10 +5,10 @@ import {
   StyledNavbar,
   Menu,
   NavLists,
-  NavList,
-  NavLink,
+  NavList
 } from '@/components/styles/Navbar.styled';
 import MobileNav from '@/components/Navbar/MobileNavigation';
+import { NavLink } from "react-router-dom"
 
 const Navbar = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,27 +25,22 @@ const Navbar = (): JSX.Element => {
         <Menu onClick={toggleHandler} />
         <NavLists>
           <NavList>
-            <NavLink to='/' smooth={true} duration={650} delay={0}>
+            <NavLink to='/' >
               Home
             </NavLink>
           </NavList>
           <NavList>
-            <NavLink to='programs' smooth={true} duration={650} delay={0}>
-              Programs
+            <NavLink to='about' >
+              About us
             </NavLink>
           </NavList>
           <NavList>
-            <NavLink to='about' smooth={true} duration={650} delay={0}>
-              About Us
+            <NavLink to='zumba' >
+              Zumba
             </NavLink>
           </NavList>
           <NavList>
-            <NavLink to='memberships' smooth={true} duration={650} delay={0}>
-              Memberships
-            </NavLink>
-          </NavList>
-          <NavList>
-            <NavLink to='testimonials' smooth={true} duration={650} delay={0}>
+            <NavLink to='testimonials' >
               Testimonials
             </NavLink>
           </NavList>
