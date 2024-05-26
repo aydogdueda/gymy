@@ -1,6 +1,7 @@
 import { link } from "fs";
 import Program1Image from "./assets/program1-img.png";
 import Program2Image from "./assets/program2-img.png";
+import { FaSmileWink } from "react-icons/fa";
 
 export type TProgramData = {
   id: number;
@@ -19,9 +20,9 @@ export const programData = [
     title: "Kardiyo ve Kuvvet",
     details:
       "Kardiyovasküler egzersiz, ayrıca kardiyo veya aerobik egzersiz olarak da adlandırılır, kalp atış hızınızı artırır ve akciğerlerinizi normalden daha fazla çalıştırır. Kuvvet antrenmanı ise kas, güç ve dayanıklılığı artırmak için direnç kullanır. Aynı zamanda direnç antrenmanı olarak da adlandırılır.",
-    imgStart: true,
+    imgStart: false,
     line: true,
-    link: "kardiyo-ve-kuvvet",
+    link: "kardiyo",
   },
   {
     id: 2,
@@ -31,7 +32,7 @@ export const programData = [
       "Grup fitnessi, iyi bir egzersiz yapmanın yanı sıra farkındalık pratiği yapma fırsatı sunar, ancak çoğumuz ders salonunu tercih ederiz. Kuvvet antrenmanı, fitness rutininizin çoğunluğunu oluşturuyorsa, farkındalığı benimsemek imkansız gibi görünebilir. ",
     imgStart: false,
     line: true,
-    link : "akil-ve-beden"
+    link: "akil",
   },
   {
     id: 3,

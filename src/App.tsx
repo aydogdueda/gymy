@@ -9,6 +9,10 @@ import About from "./pages/About";
 import Zumba from "./pages/Zumba";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Membership from "./components/Membership/Membership";
+import Pilates from "./pages/pilates";
+import Akil from "./pages/Akil";
+import Register from "./components/Register/Register";
+import Banner from "./components/Banner/Banner";
 
 function App() {
   return (
@@ -21,8 +25,11 @@ function App() {
             <Route path="*" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/zumba" element={<Zumba />} />
-            <Route path="/pilates" element={<Zumba />} />
+            <Route path="/pilates" element={<Pilates />} />
             <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/akil" element={<Akil />} />
+            <Route path="/kayit" element={<Register />} />
+            <Route path="/kayit" element={<Banner />} />
           </Routes>
           <Footer />
         </div>

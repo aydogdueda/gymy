@@ -1,14 +1,18 @@
-import { useState } from 'react';
-import { StyledButton } from '@/components/styles/Button.styled';
+import { useState } from "react";
+import { StyledButton } from "@/components/styles/Button.styled";
 import {
   Logo,
   StyledNavbar,
   Menu,
   NavLists,
-  NavList
-} from '@/components/styles/Navbar.styled';
-import MobileNav from '@/components/Navbar/MobileNavigation';
-import { NavLink } from "react-router-dom"
+  NavList,
+} from "@/components/styles/Navbar.styled";
+import MobileNav from "@/components/Navbar/MobileNavigation";
+import { NavLink } from "react-router-dom";
+import {
+  BsArrowUpRightCircleFill as ArrowIcon,
+  BsFillPlayCircleFill as PlayIcon,
+} from "react-icons/bs";
 
 const Navbar = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,26 +29,23 @@ const Navbar = (): JSX.Element => {
         <Menu onClick={toggleHandler} />
         <NavLists>
           <NavList>
-            <NavLink to='/' >
-              Home
-            </NavLink>
+            <NavLink to="/">Home</NavLink>
           </NavList>
           <NavList>
-            <NavLink to='about' >
-              About us
-            </NavLink>
+            <NavLink to="about">About us</NavLink>
           </NavList>
           <NavList>
-            <NavLink to='zumba' >
-              Zumba
-            </NavLink>
+            <NavLink to="zumba">Zumba</NavLink>
           </NavList>
+
           <NavList>
-            <NavLink to='testimonials' >
-              Testimonials
-            </NavLink>
+            <NavLink to="testimonials">Testimonials</NavLink>
           </NavList>
-          <StyledButton primary={true}>Become a member</StyledButton>
+          <StyledButton primary={true}>
+            <NavLink to="/kayit">
+              Become a member <ArrowIcon />
+            </NavLink>
+          </StyledButton>
         </NavLists>
       </StyledNavbar>
     </>

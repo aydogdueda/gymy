@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
-import { Form } from "semantic-ui-react";
-import { APP_BASE_URL } from "../../Config/Config";
+import { useNavigate } from "react-router-dom";
+import { Form, Header, Button } from "semantic-ui-react";
+import config from "../../config";
 import "./Register.css";
 import { type } from "os";
 
-export default function Register() {
-  let history = useHistory();
+const Register = () => {
+  const history = useNavigate();
 
-  let [firstname, setfirstName] = useState("");
-  let [lastname, setlastName] = useState("");
-  let [email, setemail] = useState("");
-  let [password, setpassword] = useState("");
-  let [formstatus, setFormStatus] = useState(false);
+  const [firstname, setfirstName] = useState("");
+  const [lastname, setlastName] = useState("");
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+  const [formstatus, setFormStatus] = useState(false);
 
-  let CleanInput = () => {
+  const cleanInput = () => {
     setpassword("");
     setemail("");
     setfirstName("");
     setlastName("");
   };
 
-  let RegisterRequest = () => {
+  const RegisterRequest = () => {
     if (
       firstname !== "" &&
       lastname !== "" &&
@@ -40,22 +40,22 @@ export default function Register() {
         <Header as="h2" style={{ color: "white" }}>
           Üye Ol
         </Header>
-        <Form Loading={formstatus}>
+        <Form loading={formstatus}>
           <Form.Group widths="equal">
-            <FormInput
+            <Form.Input
               value={firstname}
               required
-              Label="Adınız"
+              label="Adınız"
               control="input"
               placeholder="Adınız"
               onChange={(e) => {
                 setfirstName(e.target.value);
               }}
             />
-            <FormInput
+            <Form.Input
               required
               value={lastname}
-              Label="Soyadınız"
+              label="Soyadınız"
               control="input"
               placeholder="Soyadınız"
               onChange={(e) => {
@@ -66,17 +66,17 @@ export default function Register() {
           <Form.Input
             required
             value={email}
-            Label="E-posta"
+            label="E-posta"
             placeholder="E-posta"
             onChange={(e) => {
               setemail(e.target.value);
-              type = "email";
             }}
+            type="email"
           />
           <Form.Input
             required
             value={password}
-            Label="Şifre"
+            label="Şifre"
             placeholder="Şifre"
             onChange={(e) => {
               setpassword(e.target.value);
@@ -85,7 +85,7 @@ export default function Register() {
           />
           <Form.Checkbox
             required
-            Label="Şartları ve Hükümleri kabul ediyorum"
+            label="Şartları ve Hükümleri kabul ediyorum"
           />
 
           <Button color="yellow" type="submit" onClick={RegisterRequest}>
@@ -95,4 +95,6 @@ export default function Register() {
       </div>
     </div>
   );
-}
+};
+
+export default Register;

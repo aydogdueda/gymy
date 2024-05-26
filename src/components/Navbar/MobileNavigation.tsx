@@ -12,6 +12,11 @@ import {
   MobileStyledNav,
 } from "@/components/styles/MobileNav.styled";
 import Image from "@/assets/program1-img.png";
+import { NavLink } from "react-router-dom";
+import {
+  BsArrowUpRightCircleFill as ArrowIcon,
+  BsFillPlayCircleFill as PlayIcon,
+} from "react-icons/bs";
 
 type MobileNavProps = {
   isOpen: boolean;
@@ -87,7 +92,9 @@ const MobileNav = ({ isOpen, toggleHandler }: MobileNavProps): JSX.Element => {
         style={{ width: "100%", marginTop: "1rem" }}
         primary={true}
       >
-        Üye Olun
+        <NavLink to="/kayit">
+          Üye Olun <ArrowIcon />
+        </NavLink>
       </StyledButton>
       <MobileMenuImage>
         <MobileImg src={Image} />

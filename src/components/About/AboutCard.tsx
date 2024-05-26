@@ -28,9 +28,7 @@ export const AboutCard = ({
         <SubTitle>{subTitle}</SubTitle>
         <SectionCardTitle>{title}</SectionCardTitle>
         <SectionCardDetails>{details}</SectionCardDetails>
-        {/* <SectionLink>
-          Daha Fazla <Arrow />
-        </SectionLink> */}
+
         <NavLink to="about">
           Daha Fazla <Arrow />
         </NavLink>

@@ -6,6 +6,7 @@ import {
 } from "@/components/styles/Banner.styled";
 import { StyledButton } from "@/components/styles/Button.styled";
 import { BsArrowUpRightCircleFill as ArrowIcon } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 
 const Banner = (): JSX.Element => {
   return (
@@ -17,7 +18,9 @@ const Banner = (): JSX.Element => {
           özel programlar. Hedeflerinize göre ücretsiz seçim yapabilirsiniz!
         </BannerDetails>
         <StyledButton primary={true}>
-          Şimdi Katıl <ArrowIcon />
+          <NavLink to="/kayit">
+            Şimdi Katıl <ArrowIcon />
+          </NavLink>
         </StyledButton>
       </BannerCTA>
     </BannerContainer>

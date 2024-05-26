@@ -12,6 +12,8 @@
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.23.1",
     "react-scroll": "^1.8.4",
+    "semantic-ui-css": "^2.5.0",
+    "semantic-ui-react": "^2.0.3",
     "sort-by": "^1.2.0",
     "styled-components": "^5.3.3"
   },
@@ -26,9 +28,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "react-scripts start"
   },
   "engines": {
     "node": ">=14.0.0"
-  }
+  },
+  "description": "Gymy is a gym management system that allows gym owners to manage their gym members, trainers, and classes. It also allows gym members to book classes and view their attendance history.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

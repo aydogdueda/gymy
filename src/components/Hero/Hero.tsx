@@ -15,6 +15,7 @@ import {
   BsFillPlayCircleFill as PlayIcon,
 } from "react-icons/bs";
 import heroImg from "@/assets/hero-image.png";
+import { NavLink } from "react-router-dom";
 
 const Hero = (): JSX.Element => {
   return (
@@ -30,7 +31,9 @@ const Hero = (): JSX.Element => {
         </MainDescription>
         <MainButtons>
           <StyledButton primary={true}>
-            Başlayın <ArrowIcon />
+            <NavLink to="/kayit">
+              Başlayın <ArrowIcon />
+            </NavLink>
           </StyledButton>
           <StyledButton>
             Daha Fazla <PlayIcon />{" "}
